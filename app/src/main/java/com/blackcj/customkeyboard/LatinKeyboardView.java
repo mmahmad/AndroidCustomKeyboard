@@ -35,6 +35,8 @@ public class LatinKeyboardView extends KeyboardView {
     // TODO: Move this into android.inputmethodservice.Keyboard
     static final int KEYCODE_LANGUAGE_SWITCH = -101;
 
+    Paint paint = new Paint();
+
     public LatinKeyboardView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
@@ -67,7 +69,7 @@ public class LatinKeyboardView extends KeyboardView {
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        Paint paint = new Paint();
+        //Paint paint = new Paint();
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setTextSize(28);
         paint.setColor(Color.LTGRAY);
@@ -85,6 +87,16 @@ public class LatinKeyboardView extends KeyboardView {
                     canvas.drawText("4", key.x + (key.width - 25), key.y + 40, paint);
                 } else if (key.label.equals("t")) {
                     canvas.drawText("5", key.x + (key.width - 25), key.y + 40, paint);
+                } else if (key.label.equals("y")) {
+                    canvas.drawText("6", key.x + (key.width - 25), key.y + 40, paint);
+                } else if (key.label.equals("u")) {
+                    canvas.drawText("7", key.x + (key.width - 25), key.y + 40, paint);
+                } else if (key.label.equals("i")) {
+                    canvas.drawText("8", key.x + (key.width - 25), key.y + 40, paint);
+                } else if (key.label.equals("o")) {
+                    canvas.drawText("9", key.x + (key.width - 25), key.y + 40, paint);
+                } else if (key.label.equals("p")) {
+                    canvas.drawText("0", key.x + (key.width - 25), key.y + 40, paint);
                 }
             }
 
