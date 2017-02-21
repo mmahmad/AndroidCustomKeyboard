@@ -713,7 +713,7 @@ public class SoftKeyboard extends InputMethodService
         } else if (mComposing.length() > 0) {
 
             if (mPredictionOn && mSuggestions != null && index >= 0) {
-                mComposing.replace(0, mComposing.length(), mSuggestions.get(index));
+                mComposing.replace(0, mComposing.length(), mSuggestions.get(index) + " ");
             }
             commitTyped(getCurrentInputConnection());
 
